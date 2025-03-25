@@ -1,3 +1,6 @@
+import InputSearch from "./components/InputSearch";
+import PokemonCard from "./components/PokemonCard";
+
 function App() {
 
   // mock data
@@ -32,7 +35,10 @@ function App() {
 
   return (
     <>
-      <PokemonCard pokemon={pokemons[0]} />
+      <InputSearch />
+      {pokemons.map((pokemon) => (
+        <PokemonCard pokemon={pokemon} />
+      ))}
     </>
   )
 }
